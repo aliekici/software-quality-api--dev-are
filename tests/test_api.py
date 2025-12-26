@@ -1,5 +1,3 @@
-
-
 def test_create_user_success(client):
     response = client.post("/api/users/", json={
         "username": "TestUser1", 

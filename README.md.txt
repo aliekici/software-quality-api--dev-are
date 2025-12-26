@@ -1,22 +1,87 @@
-E-Ticaret REST API Projesi (Yazılım Kalite Güvencesi Final - Vize)
+# Yazilim Kalitesi ve Test API Projesi
 
-Ad Soyad: Ali Rıza EKİCİ	
-Öğrenci No:4011130253  
+[Python](https://img.shields.io/badge/Python-3.11-blue)
+[FastAPI](https://img.shields.io/badge/FastAPI-0.109.0-green)
+[Tests](https://img.shields.io/badge/Tests-Passing-brightgreen)
+[CI/CD](https://github.com/aliekici/software-quality-api--dev-are/actions/workflows/main.yml/badge.svg)
 
-Bu proje, FastAPI ve SQLite kullanılarak geliştirilmiş, kapsamlı test senaryolarına (Unit, Integration, System) sahip bir backend projesidir.
+Bu proje, Yazilim Kalitesi dersi final odevi kapsaminda gelistirilmistir. Modern bir REST API mimarisi kullanilarak; otomatik test surecleri, veri dogrulama ve CI/CD prensipleri uygulanmistir.
 
- Özellikler
-* **Kaynaklar:** Users, Products, Categories, Orders, Reviews
-* **Veritabanı:** SQLite (SQLAlchemy ORM)
-* **Testler:** Pytest ile yazılmış 19 adet test (Birim, Entegrasyon ve E2E Senaryoları)
-* **CI/CD:** GitHub Actions entegrasyonu ile otomatik test koşumu
+---
 
-Swagger:
+## 1. CANLI ERISIM (Swagger UI)
+
+Projeyi kurmadan dogrudan test etmek icin asagidaki linki kullanabilirsiniz:
+
+URL: https://final-odev-ali.onrender.com/docs
+
+
+## 2. KURULUM TALIMATLARI
+
+Projeyi yerel bilgisayarinizda calistirmak icin asagidaki adimlari sirasiyla uygulayin.
+
+### Adim 1: Projeyi Klonlayin
+Terminali acin ve asagidaki komutlari girin:
+
+git clone https://github.com/aliekici/software-quality-api--dev-are.git
+cd software-quality-api--dev-are
+
+### Adim 2: Sanal Ortam (Virtual Environment) Kurulumu
+Kutuphanelerin cakismamasi icin sanal ortam olusturun:
+
+Windows icin:
+python -m venv venv
+.\venv\Scripts\activate
+
+MacOS / Linux icin:
+python3 -m venv venv
+source venv/bin/activate
+
+### Adim 3: Gereksinimlerin Yuklenmesi
+Gerekli kutuphaneleri yukleyin:
+
+pip install -r requirements.txt
+
+### Adim 4: Uygulamanin Baslatilmasi
+Sunucuyu baslatin:
+
+uvicorn main:app --reload
+
+Kurulum tamamlandiginda tarayicinizdan su adrese gidin:
 http://127.0.0.1:8000/docs
 
+---
 
- Kurulum ve Çalıştırma
+## 3. TESTLERIN CALISTIRILMASI
 
-1. Gereksinimleri Yükleyin:
-   ```bash
-   pip install -r requirements.txt
+Birim testleri calistirmak icin proje ana dizininde su komutu kullanin:
+
+pytest
+
+Detayli test ciktisi icin:
+
+pytest -v
+
+---
+
+## 4. API ENDPOINT LISTESI
+
+Method: GET
+URL: /
+Aciklama: API durum kontrolu
+
+Method: POST
+URL: /items/
+Aciklama: Yeni veri girisi ve dogrulama
+
+Method: GET
+URL: /items/{item_id}
+Aciklama: ID ile veri sorgulama
+
+---
+
+## 5. ÖĞRENCİ BILGILERI
+
+Ad Soyad: Ali Rıza Ekici
+Öğrenci NO : 4011130253
+Ders: Yazilim Kalitesi ve Test
